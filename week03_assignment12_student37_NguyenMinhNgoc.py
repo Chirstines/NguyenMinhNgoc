@@ -1,24 +1,3 @@
-# greatest common divisor with Euclid algorithm
-# a: positive integers
-# b: positive integers
-def GCD(a, b):
-    if (b == 0):
-        return a
-    return GCD(b, a % b)
-a = int(input("positive integers a = "));
-b = int(input("positive integers b = "));
-
-#The probability of these two numbers together
-def probability_of_coprime(n = 1000):
-    cnt = 0
-    for i in range (n - 1):
-        for j in range (i + 1, n):
-            if i != j and GCD(i, j) == 1:
-                cnt += 1
-    return cnt / (n * (n - 1) / 2)
-print(probability_of_coprime())
-
-
 import math as m
 import numpy as np
 n = int(input("Enter an integer: "))
